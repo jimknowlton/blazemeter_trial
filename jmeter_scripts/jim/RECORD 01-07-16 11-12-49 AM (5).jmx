@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Blazemeter test plan" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter JSON to JMX convertor V.1.1. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.start_time">1363247040000</longProp>
+        <longProp name="ThreadGroup.end_time">1363247040000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://trial11.epstageiem.com/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">trial11.epstageiem.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>0.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">0.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://st-id2.navexglobal.com/SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="DomainId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">DomainId</stringProp>
+                <stringProp name="Argument.value">1351</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="Password" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">Password</stringProp>
+                <stringProp name="Argument.value">1234</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="UserName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">UserName</stringProp>
+                <stringProp name="Argument.value">jimk</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">st-id2.navexglobal.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path">SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>4636.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">9272.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://st-id2.navexglobal.com/SecureTokenServer?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">st-id2.navexglobal.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path">SecureTokenServer?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer/Auth/LogIn?ReturnUrl=%2fSecureTokenServer%3fwa%3dwsignin1.0%26wtrealm%3dhttp%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fservices%252ftrust%26wctx%3dBaseUrl%253dhttps%25253a%25252f%25252fst-id1.navexglobal.com%25252fadfs%25252fls%25252f%255cwtrealm%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252f%255cwreply%253dhttps%25253a%25252f%25252ftrial11.epstageiem.com%25252fAuthorization%25252fAuth%25252fCompleteLogOn%255cwhr%253dtrial11%255cwctx%253d%25252f%255cId%253did-2e2262fb-9768-4695-8e30-d68d98595a0d%26whr%3dtrial11&amp;wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>1608.8000000000002</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">3217.6000000000004</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://st-id1.navexglobal.com/adfs/ls/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="wa" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wa</stringProp>
+                <stringProp name="Argument.value">wsignin1.0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="wctx" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wctx</stringProp>
+                <stringProp name="Argument.value">BaseUrl=https%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fls%2f\wtrealm=https%3a%2f%2ftrial11.epstageiem.com%2f\wreply=https%3a%2f%2ftrial11.epstageiem.com%2fAuthorization%2fAuth%2fCompleteLogOn\whr=trial11\wctx=%2f\Id=id-2e2262fb-9768-4695-8e30-d68d98595a0d</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="wresult" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wresult</stringProp>
+                <stringProp name="Argument.value">&lt;trust:RequestSecurityTokenResponseCollectionxmlns:trust=&quot;http://docs.oasis-open.org/ws-sx/ws-trust/200512&quot;&gt;&lt;trust:RequestSecurityTokenResponseContext=&quot;BaseUrl=https%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fls%2f\wtrealm=https%3a%2f%2ftrial11.epstageiem.com%2f\wreply=https%3a%2f%2ftrial11.epstageiem.com%2fAuthorization%2fAuth%2fCompleteLogOn\whr=trial11\wctx=%2f\Id=id-2e2262fb-9768-4695-8e30-d68d98595a0d&quot;&gt;&lt;trust:Lifetime&gt;&lt;wsu:Createdxmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-02-01T22:22:53.059Z&lt;/wsu:Created&gt;&lt;wsu:Expiresxmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-02-02T00:22:53.059Z&lt;/wsu:Expires&gt;&lt;/trust:Lifetime&gt;&lt;wsp:AppliesToxmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReferencexmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;http://st-id1.navexglobal.com/adfs/services/trust&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;trust:RequestedSecurityToken&gt;&lt;xenc:EncryptedDataType=&quot;http://www.w3.org/2001/04/xmlenc#Element&quot;xmlns:xenc=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;&lt;xenc:EncryptionMethodAlgorithm=&quot;http://www.w3.org/2001/04/xmlenc#aes256-cbc&quot;/&gt;&lt;KeyInfoxmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;e:EncryptedKeyxmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;&lt;e:EncryptionMethodAlgorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p&quot;&gt;&lt;DigestMethodAlgorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;&lt;/e:EncryptionMethod&gt;&lt;KeyInfo&gt;&lt;o:SecurityTokenReferencexmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;X509Data&gt;&lt;X509IssuerSerial&gt;&lt;X509IssuerName&gt;CN=COMODOSSLCA,O=COMODOCALimited,L=Salford,S=GreaterManchester,C=GB&lt;/X509IssuerName&gt;&lt;X509SerialNumber&gt;11302776902973146408973992261987387869&lt;/X509SerialNumber&gt;&lt;/X509IssuerSerial&gt;&lt;/X509Data&gt;&lt;/o:SecurityTokenReference&gt;&lt;/KeyInfo&gt;&lt;e:CipherData&gt;&lt;e:CipherValue&gt;fNF83P7Z080YExLtFgiE/dIVM73JjwIO9IFB9VLieBVpcvvr/F7eGH7YgwL7sEkl11ceDQFDAqP2yxEJ6aq/ICV8jxMH5kshf4xgXxeUiVH/qhAl41ToZ7gqFkdtXrzS5iCAUV9X6xYv935YboCq9tnvAFF8YkBn9vcaPDp31NVdrok6QbTkxZhOvojc8w8C9S9UhCSpDEuS+1mxrv+NLkztoNXYjw9PcZlA6L+REZIpLA6h1V3jl6wPm6vttb/9LYAkcDGFZlm48W9ohNK6jRVp1VRLHaD0T10eSM24/vmJ2l7FKo3bLuEhmOlVfpjKiq5GonkrMbY70UGuRt0AFQ==&lt;/e:CipherValue&gt;&lt;/e:CipherData&gt;&lt;/e:EncryptedKey&gt;&lt;/KeyInfo&gt;&lt;xenc:CipherData&gt;&lt;xenc:CipherValue&gt;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&lt;/xenc:CipherValue&gt;&lt;/xenc:CipherData&gt;&lt;/xenc:EncryptedData&gt;&lt;/trust:RequestedSecurityToken&gt;&lt;trust:RequestedAttachedReference&gt;&lt;o:SecurityTokenReferencek:TokenType=&quot;http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1&quot;xmlns:k=&quot;http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd&quot;xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;o:KeyIdentifierValueType=&quot;http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID&quot;&gt;_9f1820e6-16b9-455e-963d-f03eb7f7386a&lt;/o:KeyIdentifier&gt;&lt;/o:SecurityTokenReference&gt;&lt;/trust:RequestedAttachedReference&gt;&lt;trust:RequestedUnattachedReference&gt;&lt;o:SecurityTokenReferencek:TokenType=&quot;http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1&quot;xmlns:k=&quot;http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd&quot;xmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;o:KeyIdentifierValueType=&quot;http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID&quot;&gt;_9f1820e6-16b9-455e-963d-f03eb7f7386a&lt;/o:KeyIdentifier&gt;&lt;/o:SecurityTokenReference&gt;&lt;/trust:RequestedUnattachedReference&gt;&lt;trust:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/trust:TokenType&gt;&lt;trust:RequestType&gt;http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue&lt;/trust:RequestType&gt;&lt;trust:KeyType&gt;http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer&lt;/trust:KeyType&gt;&lt;/trust:RequestSecurityTokenResponse&gt;&lt;/trust:RequestSecurityTokenResponseCollection&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">st-id1.navexglobal.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path">adfs/ls/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id2.navexglobal.com/SecureTokenServer?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fst-id1.navexglobal.com%2fadfs%2fservices%2ftrust&amp;wctx=BaseUrl%3dhttps%253a%252f%252fst-id1.navexglobal.com%252fadfs%252fls%252f%5cwtrealm%3dhttps%253a%252f%252ftrial11.epstageiem.com%252f%5cwreply%3dhttps%253a%252f%252ftrial11.epstageiem.com%252fAuthorization%252fAuth%252fCompleteLogOn%5cwhr%3dtrial11%5cwctx%3d%252f%5cId%3did-2e2262fb-9768-4695-8e30-d68d98595a0d&amp;whr=trial11</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>57.6</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">115.2</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://trial11.epstageiem.com/Authorization/Auth/CompleteLogOn" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="wa" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wa</stringProp>
+                <stringProp name="Argument.value">wsignin1.0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="wctx" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wctx</stringProp>
+                <stringProp name="Argument.value">/</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="wresult" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">wresult</stringProp>
+                <stringProp name="Argument.value">&lt;t:RequestSecurityTokenResponsexmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Createdxmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-02-01T22:23:00.202Z&lt;/wsu:Created&gt;&lt;wsu:Expiresxmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2016-02-02T00:23:00.202Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesToxmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReferencexmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://Trial11.epstageiem.com/&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;xenc:EncryptedDataType=&quot;http://www.w3.org/2001/04/xmlenc#Element&quot;xmlns:xenc=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;&lt;xenc:EncryptionMethodAlgorithm=&quot;http://www.w3.org/2001/04/xmlenc#aes256-cbc&quot;/&gt;&lt;KeyInfoxmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;e:EncryptedKeyxmlns:e=&quot;http://www.w3.org/2001/04/xmlenc#&quot;&gt;&lt;e:EncryptionMethodAlgorithm=&quot;http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p&quot;&gt;&lt;DigestMethodAlgorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/&gt;&lt;/e:EncryptionMethod&gt;&lt;KeyInfo&gt;&lt;o:SecurityTokenReferencexmlns:o=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&lt;X509Data&gt;&lt;X509IssuerSerial&gt;&lt;X509IssuerName&gt;CN=COMODOSSLCA,O=COMODOCALimited,L=Salford,S=GreaterManchester,C=GB&lt;/X509IssuerName&gt;&lt;X509SerialNumber&gt;11302776902973146408973992261987387869&lt;/X509SerialNumber&gt;&lt;/X509IssuerSerial&gt;&lt;/X509Data&gt;&lt;/o:SecurityTokenReference&gt;&lt;/KeyInfo&gt;&lt;e:CipherData&gt;&lt;e:CipherValue&gt;B2zri5u8ZIuXe/w24j1eo5ygtpGmpAhjsc9P2w1lmbv8QNo5uS4UdOd/oeeVbczvmzi685O9jvzBZY3ljmxiv5PgNupXQqpcOuBLGEKFsEV+1cwBZG7nrYHZEa4DdCS8KmiPF0JrmnDPHJ9EkOfyNe7U4Ywppb/dtwj5EI7dEXKiqk2AJ/1H/InYYVJUaIPSs3nn/3oTxQViQEMmJqH+xKnDz9jrlOZTKwXm538wDDXjKI9jVxk3ZcGtKE2jf1qUg2gUQ2R83XL4WCwSj13QBLEsYMQW3KQqJYLyJew/V+KBj8jTTpj+PQBXofowC3YAliG/iINE5hwUOUYLZ5sDkA==&lt;/e:CipherValue&gt;&lt;/e:CipherData&gt;&lt;/e:EncryptedKey&gt;&lt;/KeyInfo&gt;&lt;xenc:CipherData&gt;&lt;xenc:CipherValue&gt;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&lt;/xenc:CipherValue&gt;&lt;/xenc:CipherData&gt;&lt;/xenc:EncryptedData&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">trial11.epstageiem.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path">Authorization/Auth/CompleteLogOn</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com/adfs/ls/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com/adfs/ls/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>98.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">196.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://trial11.epstageiem.com/welcome.aspx" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <stringProp name="HTTPSampler.image_parser">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentDwn">true</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.domain">trial11.epstageiem.com</stringProp>
+          <intProp name="HTTPSampler.port">0</intProp>
+          <stringProp name="HTTPSampler.path">welcome.aspx</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com/adfs/ls/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0(WindowsNT6.3;WOW64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/48.0.2564.97Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://st-id1.navexglobal.com/adfs/ls/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip,deflate,sdch</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8,es;q=0.6</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <doubleProp>
+              <name>RandomTimer.range</name>
+              <value>229.60000000000002</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="ConstantTimer.delay">459.20000000000005</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
